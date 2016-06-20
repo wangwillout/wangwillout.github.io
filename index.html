@@ -42,6 +42,13 @@
                 <p>
                     1、php推荐标准，标准化组件开发。 <a href="http://www.php-fig.org/psr/">http://www.php-fig.org/psr/</a>
                 </p>
+                <h5>nginx部署项目：</h5>
+                <p>
+                    1，配置php.ini 里的 display_errors = On ，这样就不会是空白页了，就会报错。
+                </p>
+                <p>
+                    2，根据错误信息，我发现网站的入口目录是public, 而bootstrap目录不再public里，故没有权限。于是我在php.ini的末尾加上如下代码，把open_basedir 改到了项目的根目录，这样，php就能访问项目的所有目录了，问题就解决了。
+                </p>
               </article>
             </div>
           </div>
